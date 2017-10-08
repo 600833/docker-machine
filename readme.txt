@@ -52,4 +52,12 @@ SERVERKEY=/var/lib/boot2docker/server-key.pem
 SERVERCERT=/var/lib/boot2docker/server.pem
 
 
+root@b2d02:~# cat /var/lib/boot2docker/bootsync.sh 
+ip addr add 192.168.123.201/24 dev eth0
+echo '192.168.123.122 registry.loc' >> /etc/hosts
 
+
+[root@server22 deploy]# docker swarm  join-token worker
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-1unv1hizfkmstndlg0ebjrem8v4o7tbixbyh9hxsrm9zudb9kt-80ow75hqith57tmp41j4cod86 192.168.123.122:2377
