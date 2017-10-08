@@ -1,3 +1,5 @@
+    yum install libvirt qemu-kvm
+
 [root@server23 ~]# cat reseau123.xml
 <network>
   <name>reseau123</name>
